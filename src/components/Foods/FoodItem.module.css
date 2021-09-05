@@ -1,0 +1,17 @@
+.foodHolder{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+
+}
+
+.nameDesc{
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+}
+
+.price{
+    color: #CB202D;
+}
