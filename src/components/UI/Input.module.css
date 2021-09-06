@@ -1,0 +1,40 @@
+.input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input label {
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  
+  .input input.normal {
+    width: 3rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font: inherit;
+    padding-left: 0.5rem;
+  }
+
+  .input input.error{
+
+    width: 3rem;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 27, 43);
+    font: inherit;
+    padding-left: 0.5rem;
+    
+
+  }
+
+  .input input.error:focus{
+    outline: none;
+    width: 3rem;
+    border-radius: 5px;
+    border: 1px solid rgb(216, 27, 43);
+    font: inherit;
+    padding-left: 0.5rem;
+    
+
+  }
