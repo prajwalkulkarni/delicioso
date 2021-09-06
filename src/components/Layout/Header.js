@@ -5,14 +5,16 @@ import HeaderCartButton from './HeaderCartButton'
 export default function Header(){
     return(
         <React.Fragment>
-            <header className={styles.header}>
-                <h1>Delicioso</h1>
-                <HeaderCartButton/>
+            
+                <header className={styles.header}>
+                    <h1>Delicioso</h1>
+                    <HeaderCartButton />
 
-            </header>
-            <div className={styles['main-image']}>
-                <img src={cover} alt="header cover"/>
-            </div>
+                </header>
+                <div className={styles['main-image']}>
+                    <img src={cover} alt="header cover" />
+                </div>
+            
         </React.Fragment>
     )
 }
