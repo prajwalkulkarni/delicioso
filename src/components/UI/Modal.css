@@ -1,0 +1,38 @@
+.modal-bg{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    
+    z-index: 11;
+    
+}
+
+.modal-overlay{
+    --overlay-width:50%;
+    position: fixed;
+    top:20vh;
+    left: calc(var(--overlay-width)/2);
+    padding: 14px;
+    border-radius: 10px;
+    width: 50%;
+    /* height: stretch; */
+    z-index: 12;
+    background-color: white;
+    /* animation: slide-down 300ms ease-out   forwards; */
+    
+}
+
+@keyframes slide-down {
+    from{
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
