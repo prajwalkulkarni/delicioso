@@ -1,5 +1,8 @@
 .form {
-    text-align: right;
+    /* text-align: right; */
+    display: flex;
+    /* margin: 5px; */
+    /* align-self: center; */
   }
   
   .form button {
@@ -11,6 +14,8 @@
     padding: 0.25rem 2rem;
     border-radius: 20px;
     font-weight: bold;
+    margin: 5px;
+    /* align-self: flex-start; */
   }
   
   .form button:hover,
