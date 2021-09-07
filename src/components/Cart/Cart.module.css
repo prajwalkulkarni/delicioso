@@ -23,7 +23,7 @@
     font: inherit;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #8a2b06;
+    border: 1px solid #d11222;
     padding: 0.5rem 2rem;
     border-radius: 25px;
     margin-left: 1rem;
@@ -31,16 +31,28 @@
   
   .actions button:hover,
   .actions button:active {
-    background-color: #5a1a01;
-    border-color: #5a1a01;
+    background-color: #d11222;
+    border-color: #d11222;
     color: white;
   }
   
   .actions .button--alt {
-    color: #8a2b06;
+    color: #d11222;
   }
   
   .actions .button {
-    background-color: #8a2b06;
+    background-color: #CB202D;
     color: white;
   }
+
+
+
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #8a2b06;
+    padding: 1rem 0;
+    margin: 1rem 0;
+  }
+  
