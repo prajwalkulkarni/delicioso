@@ -15,7 +15,7 @@ export default function FoodItem(props){
             </div>
 
             <div>
-                <FoodItemForm id={props.id} price={props.price}/>
+                <FoodItemForm id={props.id} price={props.price} name={props.name}/>
             </div>
 
         </div>
