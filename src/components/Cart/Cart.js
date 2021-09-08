@@ -1,6 +1,6 @@
 import classes from './Cart.module.css';
 import Modal from '../UI/Modal'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import ModalContext from '../../context/modal-context';
 import ItemContext from '../../context/item-context';
 import CartItem from './CartItem';
@@ -8,10 +8,12 @@ import CartItem from './CartItem';
 export default function Cart(props){
     const ctx = useContext(ModalContext)
     const itm_ctx = useContext(ItemContext)
+    const [order,isOrdered] = useState(false)
 
     function closeOrder(){
         //ctx.isVisible = false
         ctx.fn()
+        isOrdered(false)
     }
     function incrementItem(name,amt){
         itm_ctx.addItem({type:"ITEM",name:name,quantity:1,amt:amt})
@@ -24,7 +26,7 @@ export default function Cart(props){
         <Modal>
 
 
-            <ul className={classes['cart-items']}>
+            {!order ?<ul className={classes['cart-items']}>
                 {itm_ctx.items.map(item => {
                     return <CartItem
                         key={item.id}
@@ -36,7 +38,7 @@ export default function Cart(props){
                         onRemove={decrementItem}
                     />
                 })}
-            </ul>
+            </ul>:<h1 className={classes['order-success']}>Order placed successfully!</h1>}
 
 
 
@@ -46,7 +48,7 @@ export default function Cart(props){
             </div>
             <div className={classes.actions}>
                 <button className={classes['button-alt']} onClick={closeOrder}>Close</button>
-                <button className={classes.button}>Order</button>
+                <button className={classes.button} onClick={()=>{isOrdered(true)}}>Order</button>
             </div>
         </Modal>
     )

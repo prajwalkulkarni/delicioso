@@ -16,7 +16,10 @@
   }
   
   .actions {
-    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    /* text-align: right; */
   }
   
   .actions button {
@@ -26,7 +29,7 @@
     border: 1px solid #d11222;
     padding: 0.5rem 2rem;
     border-radius: 25px;
-    margin-left: 1rem;
+    margin: 0.5rem;
   }
   
   .actions button:hover,
@@ -56,3 +59,26 @@
     margin: 1rem 0;
   }
   
+  .order-success{
+
+    animation: placed 0.7s linear 0.3s 1 normal forwards;
+  }
+
+  @keyframes placed {
+    0%{
+      /* color: black; */
+      transform: scale(1.0);
+    }
+    25%{
+      /* color: blue; */
+      transform: scale(1.02);
+    }
+    75%{
+      transform: scale(0.98);
+    }
+    100%{
+      font-size: scale(1.0);
+      color: rgb(0, 131, 0);
+
+    }
+  }
