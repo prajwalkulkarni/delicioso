@@ -21,10 +21,30 @@
     /* height: stretch; */
     z-index: 12;
     background-color: white;
-    /* animation: slide-down 300ms ease-out   forwards; */
+    animation: slide-down 300ms ease-out   forwards;
     
 }
 
+@media screen and (max-width:500px) {
+
+    .modal-overlay{
+        --overlay-width:70vw;
+        position: fixed;
+        top:20vh;
+        /* left: 25vw; */
+        left: 15vw;
+        padding: 14px;
+        border-radius: 10px;
+        width: var(--overlay-width);
+        /* height: stretch; */
+        z-index: 12;
+        background-color: white;
+        animation: slide-down 300ms ease-out   forwards;
+        
+    }
+
+    
+}
 @keyframes slide-down {
     from{
         opacity: 0;
