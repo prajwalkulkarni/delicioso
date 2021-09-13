@@ -21,6 +21,7 @@ export default function HeaderCartButton(){
     },[itm_ctx.items])
     
     function displayOrder(){
+        window.scrollTo(0,0)
         ctx.show()
         //alert("ssd")
     }
