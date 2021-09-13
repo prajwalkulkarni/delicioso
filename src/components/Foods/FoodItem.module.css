@@ -27,3 +27,12 @@
 .price{
     color: #CB202D;
 }
+
+img{
+    border-radius: 15px;
+
+}
+
+img .nodisplay{
+    visibility: hidden;
+}
