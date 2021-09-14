@@ -3,7 +3,8 @@ const ItemContext = React.createContext({
     items:[],
     totalAmount:0,
     addItem:(item)=>{},
-    rmItem:(id)=>{}
+    rmItem:(id)=>{},
+    clearCart:()=>{}
 })
 export default ItemContext
 
@@ -56,7 +57,7 @@ const reducer = (state,action)=>{
         const updatedTotalAmount = state.totalAmount - currItem.amt
         //console.log(currItemIndex,currItemIndex)
 
-        if(currItem.quantity===1){
+        if(currItem.quantity<2){
             replicateItems = replicateItems.filter(obj=>obj.id!==currItem.id)
         }
         else{
@@ -70,6 +71,10 @@ const reducer = (state,action)=>{
             totalAmount:updatedTotalAmount
         }
 
+    }
+
+    if(action.type==="CLEAR"){
+        return initCartState
     }
     return initCartState
 
@@ -88,10 +93,13 @@ export const ItemContextProvider = props =>{
         dispatchCartAction(id)
     }
     
+    const clearCartHandler = () =>{
+        dispatchCartAction({type:"REMOVE"})
+    }
 
     
 
-    return (<ItemContext.Provider value={{items:item.items,totalAmount:item.totalAmount,addItem:addItemToCartHandler,rmItem:removeItemFromCartHandler}}>
+    return (<ItemContext.Provider value={{items:item.items,totalAmount:item.totalAmount,addItem:addItemToCartHandler,rmItem:removeItemFromCartHandler,clearCart:clearCartHandler}}>
         {props.children}
     </ItemContext.Provider>)
 }
