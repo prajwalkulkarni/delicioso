@@ -1,7 +1,7 @@
 import classes from './Input.module.css'
 export default function Input(props){
     //alert(props.activeclass)
-    const activeClass = props.activeclass
+    let activeClass = props.activeclass
     return(
         <div className={classes.input}>
             <label htmlFor={props.input.id}>{props.label}

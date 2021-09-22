@@ -1,7 +1,7 @@
 .modal-bg{
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top:0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.75);
@@ -12,9 +12,10 @@
 
 .modal-overlay{
     --overlay-width:50%;
-    position: fixed;
+    position: absolute;
     top:20vh;
     left: calc(var(--overlay-width)/2);
+    overflow:visible;
     padding: 14px;
     border-radius: 10px;
     width: 50%;
