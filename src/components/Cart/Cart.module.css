@@ -48,6 +48,11 @@
     color: white;
   }
 
+  .actions .button:disabled{
+    background-color: #d1515b;
+    border-color: #d1515b;
+    color: white;
+  }
 
 
   .cart-item {

@@ -12,7 +12,8 @@ export default function Cart(props){
     const [isSubmitting,setIsSubmitting] = useState(false)
     const [didSubmit,setDidSubmit] = useState(false)
     const [ordered,setIsOrdered] = useState(false)
-
+    const items = itm_ctx.items
+    let orderEnabled = items.length>=1
     function closeOrder(){
         //ctx.isVisible = false
         ctx.fn()
@@ -39,7 +40,7 @@ export default function Cart(props){
 
     const modalActions = <div className={classes.actions}>
     <button className={classes['button-alt']} onClick={closeOrder}>Close</button>
-    <button className={classes.button} onClick={()=>setIsOrdered(true)}>Order</button>
+    <button disabled={!orderEnabled} className={classes.button} onClick={()=>setIsOrdered(true)}>Order</button>
     </div>
 
     const cartModalContent =   <React.Fragment>
