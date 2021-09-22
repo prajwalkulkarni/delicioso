@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import {useState } from "react"
 
 const useForm = (validate) => {
     const [touched,setIsTouched] = useState(false)
@@ -9,9 +9,8 @@ const useForm = (validate) => {
         setIsTouched(true)
         setValue(event.target.value)
         
-        // console.log(isValid)
     }
-    // console.log(value)
+
     const isValid = validate(value)
     const isInvalid = !isValid && touched
     
