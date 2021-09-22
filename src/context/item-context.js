@@ -22,7 +22,7 @@ const reducer = (state,action)=>{
         let itemIndex = state.items.findIndex(obj=>obj.name===action.name)
         
         let currItem = state.items[itemIndex]
-        console.log(itemIndex,currItem)
+
         if(currItem){
             //alert("exists")
             //currItem.amt = updatedTotalAmount
@@ -56,7 +56,6 @@ const reducer = (state,action)=>{
         let currItem = state.items[currItemIndex]
         const updatedTotalAmount = state.totalAmount - currItem.amt
         //console.log(currItemIndex,currItemIndex)
-
         if(currItem.quantity<2){
             replicateItems = replicateItems.filter(obj=>obj.id!==currItem.id)
         }
@@ -94,7 +93,7 @@ export const ItemContextProvider = props =>{
     }
     
     const clearCartHandler = () =>{
-        dispatchCartAction({type:"REMOVE"})
+        dispatchCartAction({type:"CLEAR"})
     }
 
     
