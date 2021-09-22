@@ -1,4 +1,4 @@
-import { useContext, useState,useRef } from 'react'
+import { useContext} from 'react'
 import ModalContext from '../../context/modal-context'
 import classes from './Checkout.module.css'
 import useForm from '../../hooks/form'
